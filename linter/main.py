@@ -6,7 +6,7 @@ from linter.lookml_project_parser import LookMlProjectParser
 
 
 def main():
-    print(os.environ['GITHUB_WORKSPACE']+'/')
+
     config_file = os.environ['INPUT_CONFIGFILE']
     #path = os.environ['INPUT_LOOKMLPROJECT']
 
@@ -14,7 +14,6 @@ def main():
     validator.validate()
     config = validator.config
     rules = RulesEngine(config).rules
-    #LookMlProjectParser.root_file_path = path
     data = LookMlProjectParser().get_parsed_lookml_files()
     linter = LookMlLinter(data, rules)
     linter.run()
