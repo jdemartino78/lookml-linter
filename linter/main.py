@@ -6,7 +6,7 @@ from linter.lookml_project_parser import LookMlProjectParser
 
 
 def main():
-    print(os.environ['GITHUB_WORKSPACE'])
+    print(os.environ['GITHUB_WORKSPACE']+'/')
     config_file = os.environ['INPUT_CONFIGFILE']
     #path = os.environ['INPUT_LOOKMLPROJECT']
 
