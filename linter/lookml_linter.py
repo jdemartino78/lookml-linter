@@ -13,7 +13,7 @@ class LookMlLinter:
     def __init__(self, data: Dict, rules: Dict[str, List[RuleEngineType]]) -> None:
         self.data = data
         self.rules = rules
-        self.has_errors = False
+        self.has_errors = True
 
     def run(self) -> None:
         self._errors = []
