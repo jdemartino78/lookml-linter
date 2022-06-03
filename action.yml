@@ -5,8 +5,8 @@ description: Lint LookML Projects and create Pull Request reviews with linting v
 inputs:
   configFile: # id of input
     description: "path to lookml project"
-    required: true
-    default: "config.example.yaml"
+    required: false
+    default: ${{ github.workspace }}/.github/workflows/config.example.yaml
 #   lookMlProject: # id of input
 #     description: "path to lookml project"
 #     required: true
